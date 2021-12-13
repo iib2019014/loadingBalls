@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Balls | Animation Overloading</title>
+
+    <style>
+        #content {
+            width: 50%;
+            height: 50vh;
+            margin: 0 auto;
+
+            background-color: rgb(173, 173, 173);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #load-disc {
+            /* background-color: rgb(255, 136, 0); */
+            width: 4rem;
+            height: 4rem;
+
+            transform: rotate(0deg);
+        }
+
+        @keyframes load-disc {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        #content:hover #load-disc {
+            animation-name: load-disc;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
+        .quad {
+            width: 50%;
+            height: 50%;
+
+            float: left;
+
+            display: flex;
+        }
+
+        .ball {
+            width: 1rem;
+            height: 1rem;
+
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+        }
+
+        @keyframes load-quad-1 {
+            from {
+                top: 0%;
+                left: 0%;
+            }
+
+            to {
+                top: 30%;
+                left: 30%;
+            }
+        }
+
+        @keyframes load-quad-2 {
+            from {
+                top: 0%;
+                right: 0%;
+            }
+
+            to {
+                top: 30%;
+                right: 30%;
+            }
+        }
+
+        @keyframes load-quad-3 {
+            from {
+                bottom: 0%;
+                left: 0%;
+            }
+
+            to {
+                bottom: 30%;
+                left: 30%;
+            }
+        }
+
+        @keyframes load-quad-4 {
+            from {
+                bottom: 0%;
+                right: 0%;
+            }
+
+            to {
+                bottom: 30%;
+                right: 30%;
+            }
+        }
+
+        #content:hover #Q1 {
+            position: relative;
+
+            animation-name: load-quad-1;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        #Q2 {
+            justify-content: end;
+        }
+
+        #content:hover #Q2 {
+            position: relative;
+
+            animation-name: load-quad-2;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        #Q3 {
+            justify-content: start;
+            align-items: end;
+        }
+
+        #content:hover #Q3 {
+            position: relative;
+
+            animation-name: load-quad-3;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        #Q4 {
+            justify-content: end;
+            align-items: end;
+        }
+
+        #content:hover #Q4 {
+            position: relative;
+
+            animation-name: load-quad-4;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="content">
+            <div id="load-disc">
+                <div class="quad" id="Q1">
+                    <div class="ball">
+
+                    </div>
+                </div>
+                <div class="quad" id="Q2">
+                    <div class="ball">
+
+                    </div>
+                </div>
+                <div class="quad" id="Q3">
+                    <div class="ball">
+
+                    </div>
+                </div>
+                <div class="quad" id="Q4">
+                    <div class="ball">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
