@@ -1,0 +1,173 @@
+#box {
+    width: 40%;
+    height: 60vh;
+    margin: 0 auto;
+    padding: .6rem;
+
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#box-header {
+    flex: 25%;
+}
+
+#content {
+    width: 100%;
+    /* height: 40vh; */
+    flex: 75%;
+    margin: 0 auto;
+
+    background-color: rgb(173, 173, 173);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#load-disc {
+    /* background-color: rgb(255, 136, 0); */
+    width: 4rem;
+    height: 4rem;
+
+    transform: rotate(0deg);
+}
+
+@keyframes load-disc {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#content:hover #load-disc {
+    animation-name: load-disc;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.quad {
+    width: 50%;
+    height: 50%;
+
+    float: left;
+
+    display: flex;
+}
+
+.ball {
+    width: 1rem;
+    height: 1rem;
+
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+
+@keyframes load-quad-1 {
+    from {
+        top: 0%;
+        left: 0%;
+    }
+
+    to {
+        top: 30%;
+        left: 30%;
+    }
+}
+
+@keyframes load-quad-2 {
+    from {
+        top: 0%;
+        right: 0%;
+    }
+
+    to {
+        top: 30%;
+        right: 30%;
+    }
+}
+
+@keyframes load-quad-3 {
+    from {
+        bottom: 0%;
+        left: 0%;
+    }
+
+    to {
+        bottom: 30%;
+        left: 30%;
+    }
+}
+
+@keyframes load-quad-4 {
+    from {
+        bottom: 0%;
+        right: 0%;
+    }
+
+    to {
+        bottom: 30%;
+        right: 30%;
+    }
+}
+
+#content:hover #Q1 {
+    position: relative;
+
+    animation-name: load-quad-1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#Q2 {
+    justify-content: end;
+}
+
+#content:hover #Q2 {
+    position: relative;
+
+    animation-name: load-quad-2;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#Q3 {
+    justify-content: start;
+    align-items: end;
+}
+
+#content:hover #Q3 {
+    position: relative;
+
+    animation-name: load-quad-3;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#Q4 {
+    justify-content: end;
+    align-items: end;
+}
+
+#content:hover #Q4 {
+    position: relative;
+
+    animation-name: load-quad-4;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
