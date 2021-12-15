@@ -1,10 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+
+body {
+    font-family: 'Bree Serif', serif;
+}
+
 #box {
     width: 40%;
     height: 60vh;
     margin: 0 auto;
     padding: .6rem;
 
-    border: 1px solid black;
+    border: 2px solid #1a1940;
 
     display: flex;
     flex-direction: column;
@@ -13,6 +19,20 @@
 
 #box-header {
     flex: 25%;
+
+    color: #1a1940;
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+#ans {
+    font-weight: bold;
 }
 
 #content {
@@ -21,7 +41,7 @@
     flex: 75%;
     margin: 0 auto;
 
-    background-color: rgb(173, 173, 173);
+    background-color: #1a1940;
 
     display: flex;
     align-items: center;
@@ -67,7 +87,22 @@
     height: 1rem;
 
     border-radius: 50%;
-    background-color: rgb(255, 255, 255);
+}
+
+#ball-1 {
+    background-color: #006eff;
+}
+
+#ball-2 {
+    background-color: #1900ff;
+}
+
+#ball-3 {
+    background-color: rgb(0, 81, 221);
+}
+
+#ball-4 {
+    background-color: #000a8f;
 }
 
 @keyframes load-quad-1 {
@@ -77,8 +112,8 @@
     }
 
     to {
-        top: 30%;
-        left: 30%;
+        top: 45%;
+        left: 45%;
     }
 }
 
@@ -89,8 +124,8 @@
     }
 
     to {
-        top: 30%;
-        right: 30%;
+        top: 45%;
+        right: 45%;
     }
 }
 
@@ -101,8 +136,8 @@
     }
 
     to {
-        bottom: 30%;
-        left: 30%;
+        bottom: 45%;
+        left: 45%;
     }
 }
 
@@ -113,8 +148,8 @@
     }
 
     to {
-        bottom: 30%;
-        right: 30%;
+        bottom: 45%;
+        right: 45%;
     }
 }
 
